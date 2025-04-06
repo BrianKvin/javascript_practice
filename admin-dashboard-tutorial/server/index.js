@@ -11,6 +11,10 @@ import generalRoutes from "./routes/general.js";
 import managementRoutes from "./routes/management.js";
 import salesRoutes from "./routes/sales.js";
 
+// data imports
+import User from "./models/User.js";
+import { dataUser } from "./data/index.js";
+
 /* CONFIGURATIONS */
 dotenv.config();
 const app = express();
@@ -30,8 +34,12 @@ app.use("/sales", salesRoutes);
 
 /* MONGOOSE */
 const PORT = process.env.PORT || 9000;
-mongoose.connect(process.env.MONGO_URL, {})
+mongoose
+  .connect(process.env.MONGO_URL, {})
   .then(() => {
-    app.listen(PORT, () => console.log(`Server Port: ${PORT}`))
+    app.listen(PORT, () => console.log(`Server Port: ${PORT}`));
+
+    /* ONLY ADD DATA ONE TIME */
+    User.insertMany(dataUser);
   })
-  .catch((error) => console.log(`${error}, could not connect`))
+  .catch((error) => console.log(`${error}, could not connect`));

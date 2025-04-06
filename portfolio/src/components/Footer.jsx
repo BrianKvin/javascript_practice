@@ -34,7 +34,7 @@ const Footer = () => {
             title={
               <>
                 <span>Kelvin</span>
-                <span className="text-teal-500">Brian</span>
+                <span className="text-teal-400">Brian</span>
               </>
             }
           />

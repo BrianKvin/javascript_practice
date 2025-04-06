@@ -5,7 +5,7 @@ import { useState, useEffect } from "react";
 import { useTheme } from "next-themes";
 import Image from "next/image";
 
-export default function ThemeSwitch({ className="" }) {
+export default function ThemeSwitch({ className = "" }) {
   const [mounted, setMounted] = useState(false);
   const { setTheme, resolvedTheme } = useTheme();
 
@@ -28,16 +28,15 @@ export default function ThemeSwitch({ className="" }) {
     return (
       <FiSun
         onClick={() => setTheme("light")}
-        className={`cursor-pointer ${className}`}
+        className={`cursor-pointer text-light ${className}`}
       />
     );
   }
-  if (resolvedTheme === "light") {
-    return (
-      <FiMoon
-        onClick={() => setTheme("dark")}
-        className={`cursor-pointer ${className}`}
-      />
-    );
-  }
+
+  return (
+    <FiMoon
+      onClick={() => setTheme("dark")}
+      className={`cursor-pointer text-dark ${className}`}
+    />
+  );
 }

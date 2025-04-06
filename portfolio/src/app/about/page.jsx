@@ -1,10 +1,11 @@
 import Image from "next/image";
 import React from "react";
-import profile from "../../../public/images/profile/profile.jpeg";
+import profile from "../../../public/images/profile/image.jpg";
+// import profile from "../../../public/images/profile/profile.jpeg";
 
 const About = () => {
   return (
-    <main className="min-h-screen">
+    <main className="min-h-screen w-[70%] mx-auto">
       <div className="container max-w-6xl py-6 lg:py-10 mx-auto">
         <div className="flex flex-col items-start gap-4 md:flex-row md:justify-between md:gap-8">
           <div className="flex-1 space-x-4">
@@ -31,13 +32,13 @@ const About = () => {
             </p>
           </div>
           <p className="text-muted text-lg py-4">
-            Software engineer with over 2 years of experience, specializing in
-            backend development, system optimization, and scalable solutions.
-            Proficient in Python, JavaScript, TypeScript, and Dart, with
-            additional experience in frontend development and mobile
-            development. Currently expanding expertise in data science to build
-            intelligent, high-performance applications. Passionate about
-            leveraging technology to enhance performance and user experience.
+            Experienced software engineer with 2+ years of expertise in backend
+            development, system optimization, and building scalable solutions.
+            Skilled in Python, JavaScript, TypeScript, and Dart, with a solid
+            background in frontend and mobile development. Currently advancing
+            knowledge in data science to create intelligent, high-performance
+            applications. Driven by a passion for leveraging technology to
+            optimize performance and elevate user experience.
           </p>
         </div>
       </div>
