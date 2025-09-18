@@ -27,6 +27,57 @@ code {
   text-align: center;
 }
 
+/* 🔹 Toggle Button for Instructions */
+.instructions-toggle {
+  background-color: #007bff;
+  border: none;
+  color: white;
+  padding: 6px 12px;
+  margin-top: 10px;
+  cursor: pointer;
+  font-size: 0.95rem;
+  border-radius: 4px;
+  transition: background-color 0.3s ease;
+}
+
+.instructions-toggle:hover {
+  background-color: #0056b3;
+}
+
+/* 🔹 Instructions Container */
+.instructions {
+  background-color: #f9f9f9;
+  border: 1px solid #ddd;
+  padding: 15px;
+  margin: 15px 10px;
+  border-radius: 6px;
+  font-size: 0.95rem;
+  animation: fadeIn 0.3s ease;
+  text-align: left;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(-5px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.instructions h3 {
+  margin-top: 0;
+  color: #333;
+}
+
+.instructions ul,
+.instructions ol {
+  padding-left: 20px;
+}
+
 .left {
   text-align: center;
   width: 50%;
